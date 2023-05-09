@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
 
 - Distancias en el análisis estadístico multivariado
 
-- Distancia con variables cualitativas
+- DISTANCIA con variables cualitativas
 
 - Distancias con variables cuantitativas
 
