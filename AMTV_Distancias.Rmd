@@ -396,7 +396,7 @@ La generación de energía se refiere al proceso de producir la cantidad necesar
 
 Partiendo de la información anterior, se llevó a cabo un análisis multivariado que involucró a 141 países y 12 formas de generación de energía. El objetivo fue mostrar cómo cada país genera energía, teniendo en cuenta las siguientes formas de generación:
 ```{r}
-setwd("~/Downloads")
+setwd("~/github")
 library(readxl)
 library(knitr)
 Tabla_generacion <- read_excel("Tabla generación.xlsx")
@@ -501,7 +501,7 @@ kable(Tabla_generacion)
 
 Para llevar a cabo nuestro proyecto, en primera instacia contamos con una base de datos la cual está conformada por 141 países y la información presentada es la cantidad de energía que produce cada uno de ellos a través de 12 medios de generación.
 ```{r,warning=FALSE, cache=FALSE, message=FALSE, eval=TRUE}
-setwd("~/Downloads")
+setwd("~/github")
 library(tidyverse)
 library(GGally)
 library(corrplot)
