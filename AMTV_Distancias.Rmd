@@ -113,7 +113,8 @@ A continuación, se presenta una tabla que contiene información acerca de los c
 
 ```{r,echo=F, warning = F, message = F}
 library(knitr)
-library(kableExtra)
+library(tidyverse)
+ library(kableExtra)
 
 # Crear la matriz de distancias de Jaccard
 datos <- data.frame(
@@ -396,11 +397,11 @@ La generación de energía se refiere al proceso de producir la cantidad necesar
 
 Partiendo de la información anterior, se llevó a cabo un análisis multivariado que involucró a 141 países y 12 formas de generación de energía. El objetivo fue mostrar cómo cada país genera energía, teniendo en cuenta las siguientes formas de generación:
 ```{r}
-setwd("~/github")
+setwd("~/github/AMTV")
 library(readxl)
 library(knitr)
-Tabla_generacion <- read_excel("Tabla generación.xlsx")
-colnames(Tabla_generacion) <- c("Generación de Energía","Generación de Energía")
+Tabla_generacion <- data.table::fread("Generación de Energía Full.csv")
+#colnames(Tabla_generacion) <- c("Generación de Energía","Generación de Energía")
 kable(Tabla_generacion)
 ```
 - Carbón:La generación de energía con carbón implica la quema del carbón en una caldera para producir vapor que mueve una turbina y genera electricidad. Este proceso es altamente contaminante ya que emite grandes cantidades de dióxido de carbono y otros contaminantes, contribuyendo significativamente al cambio climático y teniendo efectos negativos en la salud y el medio ambiente.
@@ -501,7 +502,7 @@ kable(Tabla_generacion)
 
 Para llevar a cabo nuestro proyecto, en primera instacia contamos con una base de datos la cual está conformada por 141 países y la información presentada es la cantidad de energía que produce cada uno de ellos a través de 12 medios de generación.
 ```{r,warning=FALSE, cache=FALSE, message=FALSE, eval=TRUE}
-setwd("~/github")
+setwd("~/github/AMTV")
 library(tidyverse)
 library(GGally)
 library(corrplot)
