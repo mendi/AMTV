@@ -1,5 +1,5 @@
 ---
-title: "Distancias en el Análisis Estadístico Multivariado"
+title: "Generación de energía"
 author: "Escuela Colombiana de Ingeniería Julio Garavito"
 date: "2023-03-28"
 output: slidy_presentation
