@@ -9,6 +9,8 @@ output: slidy_presentation
 knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
 ```
 
+__Incluir:__ una explicación de la diferencia entre relaciones entre variables y relaciones entre individuos.
+
 ## Temas a tratar
 
 - Introducción al análisis estadístico multivariado
