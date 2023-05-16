@@ -1,0 +1,244 @@
+---
+title: "Unt"
+author: "Diana Hernández, Yan Guerra"
+date: "2023-05-16"
+output: pdf_document
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
+```
+
+## Aplicacion 
+
+La generación de energía se refiere al proceso de producir la cantidad necesaria de energía para satisfacer las necesidades de la sociedad. Esta energía puede adoptar diversas formas, como electricidad, calor, combustibles líquidos o gaseosos, entre otras. Para llevar a cabo este proceso se utilizan diferentes fuentes de energía primaria, como el petróleo, el gas natural, el carbón, la energía nuclear, la energía hidroeléctrica, la energía solar, la energía eólica, entre otras. La elección de la fuente depende de varios factores, como la disponibilidad, la accesibilidad, la tecnología y la regulación. La generación de energía es esencial para la sociedad moderna, ya que permite realizar actividades cotidianas como iluminar hogares, transportar personas y bienes, procesar alimentos y producir bienes y servicios. Sin embargo, también puede tener impactos significativos en el medio ambiente y en la sociedad, como la emisión de gases de efecto invernadero, la contaminación del aire y del agua, y la alteración de ecosistemas naturales.
+
+Partiendo de la información anterior, se llevó a cabo un análisis multivariado que involucró a 141 países y 12 formas de generación de energía. El objetivo fue mostrar cómo cada país genera energía, teniendo en cuenta las siguientes formas de generación:
+```{r}
+setwd("~/github/AMTV")
+library(readxl)
+library(knitr)
+Tabla_generacion <- data.table::fread("Generación de Energía Full.csv")
+#colnames(Tabla_generacion) <- c("Generación de Energía","Generación de Energía")
+head(Tabla_generacion)
+```
+- Carbón:La generación de energía con carbón implica la quema del carbón en una caldera para producir vapor que mueve una turbina y genera electricidad. Este proceso es altamente contaminante ya que emite grandes cantidades de dióxido de carbono y otros contaminantes, contribuyendo significativamente al cambio climático y teniendo efectos negativos en la salud y el medio ambiente.
+
+![](carbon.jpeg)
+
+- Aceite:La generación de energía con aceite implica la quema del combustible líquido en una caldera para producir vapor que mueve una turbina y genera electricidad. Aunque es menos contaminante que la generación de energía con carbón, aún produce emisiones de gases de efecto invernadero y otros contaminantes que pueden tener efectos negativos en la salud y el medio ambiente. 
+
+![](carbon.jpeg)
+
+- Gas:La generación de energía con gas implica la quema de gas natural en una central eléctrica para producir electricidad. El gas natural se extrae de yacimientos subterráneos y se transporta a través de tuberías hasta la central eléctrica. Allí, el gas se quema en una turbina o en una caldera para producir vapor que mueve una turbina y genera electricidad. La generación de energía con gas natural es una alternativa más limpia que la generación de energía con carbón o petróleo, ya que produce menos emisiones de gases de efecto invernadero y otros contaminantes. Además, el gas natural es una fuente de energía relativamente abundante y fácil de transportar, lo que lo convierte en una opción popular para la generación de electricidad.
+
+![](carbon.jpeg)
+
+- Biocombustibles:La generación de energía con biocombustibles implica el uso de materiales orgánicos, como madera, cultivos energéticos, residuos de la agricultura o de la industria alimentaria, y otros residuos biodegradables para producir electricidad. En este proceso, los materiales orgánicos se queman en una caldera para producir vapor que mueve una turbina y genera electricidad. Los biocombustibles son una alternativa más sostenible y renovable a los combustibles fósiles, ya que su producción y uso emiten menos gases de efecto invernadero y otros contaminantes. Además, el uso de biocombustibles puede ayudar a reducir la cantidad de residuos orgánicos que van a los vertederos y contribuyen a la contaminación del suelo y el agua.
+
+![](carbon.jpeg)
+
+- Desperdicios:La generación de energía con desperdicios implica el uso de materiales orgánicos y no orgánicos, como basura, desechos de la industria alimentaria, entre otros, para producir electricidad. Los residuos se queman en una caldera para producir vapor que mueve una turbina y genera electricidad, lo que no solo permite obtener energía, sino que también reduce la cantidad de residuos que van a los vertederos y contribuyen a la contaminación del suelo y el agua. La generación de energía a partir de residuos puede ser una alternativa más sostenible y renovable a los combustibles fósiles, ya que su producción y uso emiten menos gases de efecto invernadero y otros contaminantes. Sin embargo, la gestión adecuada de los residuos y la prevención de su generación son fundamentales para reducir su impacto ambiental.
+
+![](carbon.jpeg)
+
+- Nuclear:La generación de energía nuclear implica la fusión de átomos de uranio o plutonio en un reactor nuclear para generar calor. Este calor se utiliza para producir vapor que mueve una turbina y genera electricidad. A diferencia de los combustibles fósiles, la energía nuclear no emite dióxido de carbono ni otros gases de efecto invernadero, lo que la convierte en una fuente de energía con bajas emisiones de carbono. Sin embargo, la energía nuclear también presenta riesgos, como la posibilidad de accidentes nucleares y la producción de residuos nucleares altamente peligrosos que deben ser almacenados durante cientos de miles de años. Debido a estos riesgos, la generación de energía nuclear es controvertida y se discute su seguridad y su impacto ambiental a largo plazo.
+
+![](carbon.jpeg)
+
+- Hidro:La generación de energía hidroeléctrica implica la construcción de una presa para retener una gran cantidad de agua y liberarla de manera controlada a través de turbinas, generando energía mecánica que se transforma en electricidad mediante un generador. La energía hidroeléctrica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes. Sin embargo, la construcción de presas y el represamiento de ríos pueden tener impactos significativos en el medio ambiente y la vida de las comunidades que dependen del río.
+
+![](carbon.jpeg)
+
+- Geotermica:La generación de energía geotérmica consiste en la extracción de calor del interior de la Tierra a través de la perforación de pozos hasta llegar a reservorios de agua caliente y vapor en la corteza terrestre, y luego utilizar el vapor extraído para mover una turbina y producir electricidad. Es una fuente de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes, pero su construcción y operación pueden tener impactos ambientales y la disponibilidad de esta fuente de energía está limitada a ciertas regiones geográficas.
+
+![](carbon.jpeg)
+
+- Energía Solar Fotovoltaica: La generación de energía solar fotovoltaica convierte la luz solar en electricidad utilizando paneles solares compuestos por celdas solares semiconductoras que liberan electrones cuando son expuestas a la luz. La energía solar es una fuente de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes, y su instalación en pequeña escala permite su uso en zonas remotas y en aplicaciones descentralizadas. No obstante, el costo inicial de instalación puede ser elevado y su eficiencia está limitada por factores como la intensidad de la luz solar y las condiciones climáticas.
+
+![](carbon.jpeg)
+
+- Solar térmica: La generación de energía solar térmica se realiza a través de paneles solares que calientan un fluido, generalmente agua, para producir vapor y generar electricidad mediante una turbina. La energía solar térmica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es altamente eficiente en zonas con alta radiación solar. No obstante, su eficiencia está limitada por factores como la intensidad de la luz solar, la temperatura ambiente y la calidad de los materiales utilizados en los paneles solares térmicos.
+
+![](carbon.jpeg)
+
+- Viento: La generación de energía con viento implica la conversión de la energía cinética del viento en electricidad mediante el uso de turbinas eólicas. La energía eólica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es adecuada para su uso en zonas remotas o urbanas. Sin embargo, la eficiencia de la energía eólica está limitada por factores como la velocidad del viento y la ubicación geográfica de los parques eólicos.
+
+![](carbon.jpeg)
+
+- Mareas: La generación de energía con mareas se basa en la utilización de la energía cinética generada por el movimiento de las mareas para producir electricidad. La energía de las mareas es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es predecible y constante. Sin embargo, la eficiencia de la generación de energía con mareas está limitada por la ubicación geográfica, ya que solo es viable en zonas cercanas al mar con grandes fluctuaciones en el nivel del agua.
+
+![](carbon.jpeg)
+
+Para llevar a cabo nuestro proyecto, en primera instacia contamos con una base de datos la cual está conformada por 141 países y la información presentada es la cantidad de energía que produce cada uno de ellos a través de 12 medios de generación.
+```{r,warning=FALSE, cache=FALSE, message=FALSE, eval=TRUE}
+setwd("~/github/AMTV")
+library(tidyverse)
+library(GGally)
+library(corrplot)
+library(knitr)
+
+energia <- read_csv2("Generación de Energía Full.csv")
+names(energia) [1] <- "País"
+```
+
+```{r}
+#Eliminación de la columna con los países y reasignación de modo que sea el nombre de cada una de las filas.
+energia2<- data.frame(energia, row.names = energia$País)
+energia2 <- energia2[,-c(1)]
+
+energia$País[c(66,73,74,76,99,100,101,119,120,127,131,136)] <- str_replace(energia$País[c(66,73,74,76,99,100,101,119,120,127,131,136)],"\x8e","á")
+energia$País[c(12,13,21,88)] <- str_replace(energia$País[c(12,13,21,88)],"\x8e","é")
+energia$País[c(14,48,58,62,80,95,132)] <- str_replace(energia$País[c(14,48,58,62,80,95,132)],"\x8e","í")
+energia$País[c(72)] <- str_replace(energia$País[c(72)],"\x8e","ó")
+energia$País[c(24,103,108,109,110,111,130)] <- str_replace(energia$País[c(24,103,108,109,110,111,130)],"\x8e","ú")
+energia$País[c(42,123)] <- str_replace(energia$País[c(42,123)],"\x8e","Á")
+energia$País[c(46)] <- str_replace(energia$País[c(46)],"\x8e","ñ")
+
+head((energia[1:6,]))
+```
+
+## Normalización
+
+La normalización es un proceso estadístico que se utiliza para escalar valores en un conjunto de datos a una escala común. El objetivo de la normalización es eliminar el efecto de la escala de las variables, para que las variables estén en la misma escala y puedan ser comparadas de manera justa. 
+
+Haciendo uso del mínimo y máximo podemos llevar un conjunto de datos a una escala común. En este caso, los valores se escalan entre 0 y 1, de manera que el valor mínimo en el conjunto de datos se convierte en 0 y el valor máximo se convierte en 1. Su fórmula es:
+
+$$Normalizacion=\frac{(x-min(x))}{max(x)-min(x)}$$
+
+
+```{r}
+#aplicacion  de la normalizacion al data frame
+energia_norm<- energia2 |> 
+  map_df(~(.-min(.))/(max(.)-min(.))) #Aplicamos a cada uno de los datos por medio de programacion funcional la formula de normalizacion
+
+#analisis de componentes principales a los datos normalizados
+acp_norm <- prcomp(energia_norm)
+summary(acp_norm)
+
+```
+
+
+```{r}
+plot(acp_norm,col="#FF83FA", main="Variabilidad por cada componente, dataset normalizado")
+```
+
+
+La normalización utilizando mínimo y máximo también se conoce como "escalado entre 0 y 1". Esta técnica es útil para comparar valores en diferentes conjuntos de datos y para garantizar que las variables estén en la misma escala antes de aplicar ciertas técnicas de análisis estadístico, como la regresión y el análisis de componentes principales (PCA).
+
+## Estandarizacion 
+
+
+La estandarización es un proceso estadístico que se utiliza para transformar valores en un conjunto de datos de manera que tengan una media de cero y una desviación estándar de uno. El objetivo de la estandarización es eliminar el efecto de la escala y centrar los datos en torno a cero, lo que permite comparar variables que tienen diferentes unidades de medida.
+
+La estandarización se realiza restando la media del conjunto de datos a cada valor individual y dividiendo el resultado por la desviación estándar. Esto tiene el efecto de "centrar" los datos en torno a cero y de "escalar" los datos para que tengan una desviación estándar de uno.  Su fórmula es:
+
+$$(Z)=\frac{x-\mu}{\sigma}$$
+
+```{r}
+energia_estan <- energia2|>
+  map_df(~(.-mean(.)/sd(.)))
+acp_estan <- prcomp(energia_estan)
+summary(acp_estan)
+```
+
+
+```{r}
+plot(acp_estan,col="#54FF9F",main="Variabilidad por cada componente, dataset estandarizado")
+```
+
+
+La estandarización es una técnica comúnmente utilizada en el análisis estadístico para comparar variables que tienen diferentes unidades de medida y para identificar valores extremos o atípicos en un conjunto de datos. También se utiliza en la construcción de modelos estadísticos, como el análisis discriminante y la regresión logística, donde las variables deben estar en la misma escala para poder comparar sus efectos en el modelo.
+
+## Porcentajes
+
+La estandarización por medio de porcentajes es una técnica estadística que se utiliza para comparar variables que están en diferentes escalas y unidades de medida. En lugar de trabajar con los valores crudos de las variables, la estandarización por medio de porcentajes convierte los valores en porcentajes para que se puedan comparar de manera más adecuada. Este método consiste en dividir cada un de los valores de la variables entre el total de producción de energía:
+
+
+$$Porcentajes=\frac{X_i}{Total}$$
+```{r,warning=FALSE}
+total <- energia$Coal+energia$Oil+energia$Gas+energia$Biofuels+energia$Waste+
+  energia$Nuclear+energia$Hydro+energia$Geothermal+energia$`Solar PV`+energia$`Solar thermal`+
+  energia$Wind+energia$Tide
+
+energia_3 <- data.frame(energia, total)
+
+```
+
+La estandarización por medio de porcentajes es útil para comparar variables que tienen diferentes unidades de medida, diferentes escalas o diferentes magnitudes. Por ejemplo, se puede utilizar para comparar el número de ventas de diferentes productos o marcas, o para comparar los ingresos de diferentes empresas que operan en diferentes mercados o regiones.
+
+```{r,warning=FALSE}
+porcentajes <- energia
+
+for(i in 2:13) {
+  porcentajes[, i] <- energia_3[,-1][, i-1]/energia_3[, 14]
+}
+
+porcentajes_2 <- porcentajes |>
+  select(-1)
+
+rownames(porcentajes_2) <- energia$País
+
+acp_pct <- prcomp(porcentajes_2)
+summary(acp_pct)
+```
+
+
+```{r}
+plot(acp_pct,col="#98F5FF",main="Variabilidad por cada componente, dataset de porcentajes")
+```
+
+
+Finalmente, evidenciamos gráficamente el comportamiento de cada uno de los distintos métodos utilizados para poder determinar cuál es la mejor opción y llegar a conclusiones verídicas en cuanto a la generación de energía.
+
+```{r}
+
+dataframe <- data.frame(normalizado=acp_norm$sdev^2,
+                        estandarizado=acp_estan$sdev^2,
+                        porcentaje=acp_pct$sdev^2)|>
+  mutate(eje=1:12)
+dataframe
+```
+
+
+```{r}
+gnorm <- ggplot(dataframe,aes(eje,normalizado))+
+  geom_col(fill="#FF83FA")
+gestan <- ggplot(dataframe,aes(eje,estandarizado))+
+  geom_col(fill="#54FF9F")
+gporcen <- ggplot(dataframe,aes(eje,porcentaje))+
+  geom_col(fill="#98F5FF")
+
+library(patchwork)
+gnorm / gestan / gporcen
+```
+
+
+Seguido a esto, vamos a evaluar las correlaciones 
+```{r}
+energianorm <- data.frame(energia2,acp_norm$x[,1:4])
+cornorm <- cor(energianorm)
+corrplot::corrplot(cornorm,title = "Normalizado",type = "upper",
+                   diag = F, method = "ellipse",tl.col="black",
+                   tl.cex=0.8) #titulo, color de letras, tamaño de las letras
+```
+
+Evidenciamos que el 1 componente principal que se relaciona fuertemente con oil, luego se relaciona con Geothermal y solar thermal, posteriormente se relaciona con hydro, nuclear, gas y coal. Finalmente se relaciona con biofuels, waste, solar.PV y Wind. Todas las relaciones son positivas.
+
+Evidenciamos que el 2 componente principal que se relaciona fuertemente con coal, biofuels, solar.PV y Wind postivamente mientras que negativamente se relaciona con Tide, nuclear, solar.themal luego y Oil, por otro lado se relaciona con Geothermal, nuclear y gas negativamente, mientras que positivamente hydro y coal.
+
+Evidenciamos que el 3 componente principal que se relaciona fuertemente con coal, hydro, wind y solar.PV positivamente, negativamente 
+```{r}
+
+energiaestan <- data.frame(energia2,acp_estan$x[,1:4])
+corestan <- cor(energiaestan)
+corrplot::corrplot(corestan,title = "Estandarizado",type = "upper",
+                   diag = F, method = "ellipse",tl.col="black",
+                   tl.cex=0.8) 
+
+energiapct <- data.frame(energia2,acp_pct$x[,1:4])
+corpct <- cor(energiapct)
+corrplot::corrplot(corpct, title="Porcentajes",type = "upper",
+                   diag = F, method = "ellipse",tl.col="black",
+                   tl.cex=0.8) 
+```
