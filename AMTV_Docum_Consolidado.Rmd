@@ -17,7 +17,7 @@ __Incluir:__ una explicación de la diferencia entre relaciones entre variables 
 
 - Distancias en el análisis estadístico multivariado
 
-- Distancia con variables cualitativas
+- Distancias con variables cualitativas
 
 - Distancias con variables cuantitativas
 
