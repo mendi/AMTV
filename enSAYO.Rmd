@@ -20,55 +20,57 @@ library(readxl)
 library(knitr)
 Tabla_generacion <- data.table::fread("Generación de Energía Full.csv")
 #colnames(Tabla_generacion) <- c("Generación de Energía","Generación de Energía")
-head(Tabla_generacion)
+Tabla_generacion[1:11,]
 ```
 - Carbón:La generación de energía con carbón implica la quema del carbón en una caldera para producir vapor que mueve una turbina y genera electricidad. Este proceso es altamente contaminante ya que emite grandes cantidades de dióxido de carbono y otros contaminantes, contribuyendo significativamente al cambio climático y teniendo efectos negativos en la salud y el medio ambiente.
 
-![](carbon.jpeg)
+![](carbon.jpeg){width="400px"}
 
 - Aceite:La generación de energía con aceite implica la quema del combustible líquido en una caldera para producir vapor que mueve una turbina y genera electricidad. Aunque es menos contaminante que la generación de energía con carbón, aún produce emisiones de gases de efecto invernadero y otros contaminantes que pueden tener efectos negativos en la salud y el medio ambiente. 
 
-![](carbon.jpeg)
+![](aceite.jpeg){width="400px"}
 
 - Gas:La generación de energía con gas implica la quema de gas natural en una central eléctrica para producir electricidad. El gas natural se extrae de yacimientos subterráneos y se transporta a través de tuberías hasta la central eléctrica. Allí, el gas se quema en una turbina o en una caldera para producir vapor que mueve una turbina y genera electricidad. La generación de energía con gas natural es una alternativa más limpia que la generación de energía con carbón o petróleo, ya que produce menos emisiones de gases de efecto invernadero y otros contaminantes. Además, el gas natural es una fuente de energía relativamente abundante y fácil de transportar, lo que lo convierte en una opción popular para la generación de electricidad.
 
-![](carbon.jpeg)
+![](gas.jpeg){width="400px" }
 
 - Biocombustibles:La generación de energía con biocombustibles implica el uso de materiales orgánicos, como madera, cultivos energéticos, residuos de la agricultura o de la industria alimentaria, y otros residuos biodegradables para producir electricidad. En este proceso, los materiales orgánicos se queman en una caldera para producir vapor que mueve una turbina y genera electricidad. Los biocombustibles son una alternativa más sostenible y renovable a los combustibles fósiles, ya que su producción y uso emiten menos gases de efecto invernadero y otros contaminantes. Además, el uso de biocombustibles puede ayudar a reducir la cantidad de residuos orgánicos que van a los vertederos y contribuyen a la contaminación del suelo y el agua.
 
-![](carbon.jpeg)
+![](bio.jpeg){width="400px"}
 
 - Desperdicios:La generación de energía con desperdicios implica el uso de materiales orgánicos y no orgánicos, como basura, desechos de la industria alimentaria, entre otros, para producir electricidad. Los residuos se queman en una caldera para producir vapor que mueve una turbina y genera electricidad, lo que no solo permite obtener energía, sino que también reduce la cantidad de residuos que van a los vertederos y contribuyen a la contaminación del suelo y el agua. La generación de energía a partir de residuos puede ser una alternativa más sostenible y renovable a los combustibles fósiles, ya que su producción y uso emiten menos gases de efecto invernadero y otros contaminantes. Sin embargo, la gestión adecuada de los residuos y la prevención de su generación son fundamentales para reducir su impacto ambiental.
 
-![](carbon.jpeg)
+![](desper.jpeg){width="400px"}
 
 - Nuclear:La generación de energía nuclear implica la fusión de átomos de uranio o plutonio en un reactor nuclear para generar calor. Este calor se utiliza para producir vapor que mueve una turbina y genera electricidad. A diferencia de los combustibles fósiles, la energía nuclear no emite dióxido de carbono ni otros gases de efecto invernadero, lo que la convierte en una fuente de energía con bajas emisiones de carbono. Sin embargo, la energía nuclear también presenta riesgos, como la posibilidad de accidentes nucleares y la producción de residuos nucleares altamente peligrosos que deben ser almacenados durante cientos de miles de años. Debido a estos riesgos, la generación de energía nuclear es controvertida y se discute su seguridad y su impacto ambiental a largo plazo.
 
-![](carbon.jpeg)
+![](nucle.jpeg){width="400px"}
 
 - Hidro:La generación de energía hidroeléctrica implica la construcción de una presa para retener una gran cantidad de agua y liberarla de manera controlada a través de turbinas, generando energía mecánica que se transforma en electricidad mediante un generador. La energía hidroeléctrica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes. Sin embargo, la construcción de presas y el represamiento de ríos pueden tener impactos significativos en el medio ambiente y la vida de las comunidades que dependen del río.
 
-![](carbon.jpeg)
+![](hidro.jpeg){width="400px"}
 
 - Geotermica:La generación de energía geotérmica consiste en la extracción de calor del interior de la Tierra a través de la perforación de pozos hasta llegar a reservorios de agua caliente y vapor en la corteza terrestre, y luego utilizar el vapor extraído para mover una turbina y producir electricidad. Es una fuente de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes, pero su construcción y operación pueden tener impactos ambientales y la disponibilidad de esta fuente de energía está limitada a ciertas regiones geográficas.
 
-![](carbon.jpeg)
+![](geoter.jpeg){width="400px"}
 
 - Energía Solar Fotovoltaica: La generación de energía solar fotovoltaica convierte la luz solar en electricidad utilizando paneles solares compuestos por celdas solares semiconductoras que liberan electrones cuando son expuestas a la luz. La energía solar es una fuente de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes, y su instalación en pequeña escala permite su uso en zonas remotas y en aplicaciones descentralizadas. No obstante, el costo inicial de instalación puede ser elevado y su eficiencia está limitada por factores como la intensidad de la luz solar y las condiciones climáticas.
 
-![](carbon.jpeg)
+![](fotovol.jpeg){width="400px"}
+
 
 - Solar térmica: La generación de energía solar térmica se realiza a través de paneles solares que calientan un fluido, generalmente agua, para producir vapor y generar electricidad mediante una turbina. La energía solar térmica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es altamente eficiente en zonas con alta radiación solar. No obstante, su eficiencia está limitada por factores como la intensidad de la luz solar, la temperatura ambiente y la calidad de los materiales utilizados en los paneles solares térmicos.
 
-![](carbon.jpeg)
+![](termico.png){width="400px"}
 
 - Viento: La generación de energía con viento implica la conversión de la energía cinética del viento en electricidad mediante el uso de turbinas eólicas. La energía eólica es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es adecuada para su uso en zonas remotas o urbanas. Sin embargo, la eficiencia de la energía eólica está limitada por factores como la velocidad del viento y la ubicación geográfica de los parques eólicos.
 
-![](carbon.jpeg)
+![](viento2.jpeg){width="400px"}
 
 - Mareas: La generación de energía con mareas se basa en la utilización de la energía cinética generada por el movimiento de las mareas para producir electricidad. La energía de las mareas es una forma de energía renovable y limpia que no emite gases de efecto invernadero ni otros contaminantes en su proceso de generación, y es predecible y constante. Sin embargo, la eficiencia de la generación de energía con mareas está limitada por la ubicación geográfica, ya que solo es viable en zonas cercanas al mar con grandes fluctuaciones en el nivel del agua.
 
-![](carbon.jpeg)
+
+![](mareas.jpeg){width="400px"}
 
 Para llevar a cabo nuestro proyecto, en primera instacia contamos con una base de datos la cual está conformada por 141 países y la información presentada es la cantidad de energía que produce cada uno de ellos a través de 12 medios de generación.
 ```{r,warning=FALSE, cache=FALSE, message=FALSE, eval=TRUE}
