@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -13,6 +16,12 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand\BKM@entry[2]{}
+\BKM@entry{id=1,dest={73656374696F6E2A2E31},srcline={91}}{5C3337365C3337375C303030545C303030655C3030306D5C303030615C303030735C3030305C3034305C303030615C3030305C3034305C303030745C303030725C303030615C303030745C303030615C30303072}
+\BKM@entry{id=2,dest={73656374696F6E2A2E32},srcline={108}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030695C303030735C303030695C303030735C3030305C3034305C303030655C303030735C303030745C303030615C303030645C303030695C303030735C303030745C303030695C303030635C3030306F5C3030305C3034305C3030306D5C303030755C3030306C5C303030745C303030695C303030765C303030615C303030725C303030695C303030615C303030645C3030306F}
+\BKM@entry{id=3,dest={73656374696F6E2A2E33},srcline={117}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C303030735C3030305C3034305C303030655C3030306E5C3030305C3034305C303030655C3030306C5C3030305C3034305C303030615C3030306E5C3030305C3334315C3030306C5C303030695C303030735C303030695C303030735C3030305C3034305C303030655C303030735C303030745C303030615C303030645C3030305C3335355C303030735C303030745C303030695C303030635C3030306F5C3030305C3034305C3030306D5C303030755C3030306C5C303030745C303030695C303030765C303030615C303030725C303030695C303030615C303030645C3030306F}
+\BKM@entry{id=4,dest={73656374696F6E2A2E34},srcline={137}}{5C3337365C3337375C303030535C303030655C3030306C5C303030655C303030635C303030635C303030695C3030305C3336335C3030306E5C3030305C3034305C303030645C303030655C3030305C3034305C3030306C5C303030615C3030305C3034305C3030306D5C303030655C303030645C303030695C303030645C303030615C3030305C3034305C303030645C303030655C3030305C3034305C303030645C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030655C3030306E5C3030305C3034305C303030615C3030306E5C3030305C3334315C3030306C5C303030695C303030735C303030695C303030735C3030305C3034305C303030655C303030735C303030745C303030615C303030645C3030305C3335355C303030735C303030745C303030695C303030635C3030306F5C3030305C3034305C3030306D5C303030755C3030306C5C303030745C303030695C303030765C303030615C303030725C303030695C303030615C303030645C3030306F}
+\BKM@entry{id=5,dest={73656374696F6E2A2E35},srcline={157}}{5C3337365C3337375C303030535C303030655C3030306C5C303030655C303030635C303030635C303030695C3030305C3336335C3030306E5C3030305C3034305C303030645C303030655C3030305C3034305C3030306C5C303030615C3030305C3034305C3030306D5C303030655C303030645C303030695C303030645C303030615C3030305C3034305C303030645C303030655C3030305C3034305C303030645C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030655C3030306E5C3030305C3034305C303030615C3030306E5C3030305C3334315C3030306C5C303030695C303030735C303030695C303030735C3030305C3034305C303030655C303030735C303030745C303030615C303030645C3030305C3335355C303030735C303030745C303030695C303030635C3030306F5C3030305C3034305C3030306D5C303030755C3030306C5C303030745C303030695C303030765C303030615C303030725C303030695C303030615C303030645C3030306F}
 \@writefile{toc}{\contentsline {subsection}{Temas a tratar}{1}{section*.1}\protected@file@percent }
 \newlabel{temas-a-tratar}{{}{1}{Temas a tratar}{section*.1}{}}
 \@writefile{toc}{\contentsline {subsection}{Analisis estadistico multivariado}{1}{section*.2}\protected@file@percent }
@@ -21,49 +30,71 @@
 \newlabel{distancias-en-el-anuxe1lisis-estaduxedstico-multivariado}{{}{1}{Distancias en el análisis estadístico multivariado}{section*.3}{}}
 \@writefile{toc}{\contentsline {subsection}{Selección de la medida de distancia en análisis estadístico multivariado}{1}{section*.4}\protected@file@percent }
 \newlabel{selecciuxf3n-de-la-medida-de-distancia-en-anuxe1lisis-estaduxedstico-multivariado}{{}{1}{Selección de la medida de distancia en análisis estadístico multivariado}{section*.4}{}}
-\@writefile{toc}{\contentsline {subsection}{Selección de la medida de distancia en análisis estadístico multivariado}{2}{section*.5}\protected@file@percent }
-\newlabel{selecciuxf3n-de-la-medida-de-distancia-en-anuxe1lisis-estaduxedstico-multivariado-1}{{}{2}{Selección de la medida de distancia en análisis estadístico multivariado}{section*.5}{}}
+\@writefile{toc}{\contentsline {subsection}{Selección de la medida de distancia en análisis estadístico multivariado}{1}{section*.5}\protected@file@percent }
+\newlabel{selecciuxf3n-de-la-medida-de-distancia-en-anuxe1lisis-estaduxedstico-multivariado-1}{{}{1}{Selección de la medida de distancia en análisis estadístico multivariado}{section*.5}{}}
+\BKM@entry{id=6,dest={73656374696F6E2A2E36},srcline={181}}{5C3337365C3337375C3030304D5C303030655C303030645C303030695C303030645C303030615C303030735C3030305C3034305C303030645C303030655C3030305C3034305C303030645C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030655C3030306E5C303030745C303030725C303030655C3030305C3034305C303030695C3030306E5C303030645C303030695C303030765C303030695C303030645C303030755C3030306F5C30303073}
+\BKM@entry{id=7,dest={73656374696F6E2A2E37},srcline={214}}{5C3337365C3337375C3030304D5C303030655C303030645C303030695C303030645C303030615C303030735C3030305C3034305C303030645C303030655C3030305C3034305C303030645C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030655C3030306E5C303030745C303030725C303030655C3030305C3034305C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C30303073}
+\BKM@entry{id=8,dest={73656374696F6E2A2E38},srcline={225}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030305C3034305C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C303030735C3030305C3034305C303030635C303030755C303030615C3030306C5C303030695C303030745C303030615C303030745C303030695C303030765C303030615C30303073}
+\BKM@entry{id=9,dest={73656374696F6E2A2E39},srcline={242}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030485C303030615C3030306D5C3030306D5C303030695C3030306E5C30303067}
+\BKM@entry{id=10,dest={73656374696F6E2A2E3130},srcline={255}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
 \@writefile{toc}{\contentsline {subsection}{Medidas de distancia entre individuos}{2}{section*.6}\protected@file@percent }
 \newlabel{medidas-de-distancia-entre-individuos}{{}{2}{Medidas de distancia entre individuos}{section*.6}{}}
 \@writefile{toc}{\contentsline {subsection}{Medidas de distancia entre variables}{2}{section*.7}\protected@file@percent }
 \newlabel{medidas-de-distancia-entre-variables}{{}{2}{Medidas de distancia entre variables}{section*.7}{}}
 \@writefile{toc}{\contentsline {subsection}{Distancias con variables cualitativas}{2}{section*.8}\protected@file@percent }
 \newlabel{distancias-con-variables-cualitativas}{{}{2}{Distancias con variables cualitativas}{section*.8}{}}
-\@writefile{toc}{\contentsline {subsection}{Distancia Hamming}{3}{section*.9}\protected@file@percent }
-\newlabel{distancia-hamming}{{}{3}{Distancia Hamming}{section*.9}{}}
+\@writefile{toc}{\contentsline {subsection}{Distancia Hamming}{2}{section*.9}\protected@file@percent }
+\newlabel{distancia-hamming}{{}{2}{Distancia Hamming}{section*.9}{}}
+\BKM@entry{id=11,dest={73656374696F6E2A2E3131},srcline={274}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C3030304A5C303030615C303030635C303030635C303030615C303030725C30303064}
+\BKM@entry{id=12,dest={73656374696F6E2A2E3132},srcline={290}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
+\BKM@entry{id=13,dest={73656374696F6E2A2E3133},srcline={298}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
+\BKM@entry{id=14,dest={73656374696F6E2A2E3134},srcline={308}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E5C303030655C30303073}
 \@writefile{toc}{\contentsline {subsection}{Ejemplo}{3}{section*.10}\protected@file@percent }
 \newlabel{ejemplo}{{}{3}{Ejemplo}{section*.10}{}}
 \@writefile{toc}{\contentsline {subsection}{Distancia Jaccard}{3}{section*.11}\protected@file@percent }
 \newlabel{distancia-jaccard}{{}{3}{Distancia Jaccard}{section*.11}{}}
 \@writefile{toc}{\contentsline {subsection}{Ejemplo}{3}{section*.12}\protected@file@percent }
 \newlabel{ejemplo-1}{{}{3}{Ejemplo}{section*.12}{}}
-\@writefile{toc}{\contentsline {subsection}{Ejemplo}{4}{section*.13}\protected@file@percent }
-\newlabel{ejemplo-2}{{}{4}{Ejemplo}{section*.13}{}}
-\@writefile{toc}{\contentsline {subsection}{Conclusiones}{4}{section*.14}\protected@file@percent }
-\newlabel{conclusiones}{{}{4}{Conclusiones}{section*.14}{}}
+\@writefile{toc}{\contentsline {subsection}{Ejemplo}{3}{section*.13}\protected@file@percent }
+\newlabel{ejemplo-2}{{}{3}{Ejemplo}{section*.13}{}}
+\@writefile{toc}{\contentsline {subsection}{Conclusiones}{3}{section*.14}\protected@file@percent }
+\newlabel{conclusiones}{{}{3}{Conclusiones}{section*.14}{}}
+\BKM@entry{id=15,dest={73656374696F6E2A2E3135},srcline={330}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C303030735C3030305C3034305C303030635C3030306F5C3030306E5C3030305C3034305C303030765C303030615C303030725C303030695C303030615C303030625C3030306C5C303030655C303030735C3030305C3034305C303030635C303030755C303030615C3030306E5C303030745C303030695C303030745C303030615C303030745C303030695C303030765C303030615C30303073}
+\BKM@entry{id=16,dest={73656374696F6E2A2E3136},srcline={351}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C303030455C303030755C303030635C3030306C5C303030695C303030645C303030695C303030615C3030306E5C30303061}
+\BKM@entry{id=17,dest={73656374696F6E2A2E3137},srcline={365}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
+\BKM@entry{id=18,dest={73656374696F6E2A2E3138},srcline={375}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C3030304D5C303030615C3030306E5C303030685C303030615C303030745C303030745C303030615C3030306E}
+\BKM@entry{id=19,dest={73656374696F6E2A2E3139},srcline={391}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
 \@writefile{toc}{\contentsline {subsection}{Distancias con variables cuantitativas}{4}{section*.15}\protected@file@percent }
 \newlabel{distancias-con-variables-cuantitativas}{{}{4}{Distancias con variables cuantitativas}{section*.15}{}}
 \@writefile{toc}{\contentsline {subsection}{Distancia Euclidiana}{4}{section*.16}\protected@file@percent }
 \newlabel{distancia-euclidiana}{{}{4}{Distancia Euclidiana}{section*.16}{}}
-\@writefile{toc}{\contentsline {subsection}{Ejemplo}{5}{section*.17}\protected@file@percent }
-\newlabel{ejemplo-3}{{}{5}{Ejemplo}{section*.17}{}}
-\@writefile{toc}{\contentsline {subsection}{Distancia Manhattan}{5}{section*.18}\protected@file@percent }
-\newlabel{distancia-manhattan}{{}{5}{Distancia Manhattan}{section*.18}{}}
+\@writefile{toc}{\contentsline {subsection}{Ejemplo}{4}{section*.17}\protected@file@percent }
+\newlabel{ejemplo-3}{{}{4}{Ejemplo}{section*.17}{}}
+\@writefile{toc}{\contentsline {subsection}{Distancia Manhattan}{4}{section*.18}\protected@file@percent }
+\newlabel{distancia-manhattan}{{}{4}{Distancia Manhattan}{section*.18}{}}
+\BKM@entry{id=20,dest={73656374696F6E2A2E3230},srcline={401}}{5C3337365C3337375C303030445C303030695C303030735C303030745C303030615C3030306E5C303030635C303030695C303030615C3030305C3034305C3030304D5C303030615C303030685C303030615C3030306C5C303030615C3030306E5C3030306F5C303030625C303030695C30303073}
+\BKM@entry{id=21,dest={73656374696F6E2A2E3231},srcline={417}}{5C3337365C3337375C303030455C3030306A5C303030655C3030306D5C303030705C3030306C5C3030306F}
+\BKM@entry{id=22,dest={73656374696F6E2A2E3232},srcline={436}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E5C303030655C30303073}
+\BKM@entry{id=23,dest={73656374696F6E2A2E3233},srcline={451}}{5C3337365C3337375C303030445C303030695C303030615C303030675C303030725C303030615C3030306D5C303030615C3030305C3034305C303030645C303030655C3030305C3034305C303030645C303030695C303030735C303030705C303030655C303030725C303030735C303030695C3030306F5C3030306E}
 \@writefile{toc}{\contentsline {subsection}{Ejemplo}{5}{section*.19}\protected@file@percent }
 \newlabel{ejemplo-4}{{}{5}{Ejemplo}{section*.19}{}}
 \@writefile{toc}{\contentsline {subsection}{Distancia Mahalanobis}{5}{section*.20}\protected@file@percent }
 \newlabel{distancia-mahalanobis}{{}{5}{Distancia Mahalanobis}{section*.20}{}}
 \@writefile{toc}{\contentsline {subsection}{Ejemplo}{5}{section*.21}\protected@file@percent }
 \newlabel{ejemplo-5}{{}{5}{Ejemplo}{section*.21}{}}
-\@writefile{toc}{\contentsline {subsection}{Conclusiones}{6}{section*.22}\protected@file@percent }
-\newlabel{conclusiones-1}{{}{6}{Conclusiones}{section*.22}{}}
-\@writefile{toc}{\contentsline {subsection}{Diagrama de dispersion}{6}{section*.23}\protected@file@percent }
-\newlabel{diagrama-de-dispersion}{{}{6}{Diagrama de dispersion}{section*.23}{}}
-\@writefile{toc}{\contentsline {subsection}{Conclusiones}{7}{section*.24}\protected@file@percent }
-\newlabel{conclusiones-2}{{}{7}{Conclusiones}{section*.24}{}}
-\@writefile{toc}{\contentsline {subsection}{Tabla}{7}{section*.25}\protected@file@percent }
-\newlabel{tabla}{{}{7}{Tabla}{section*.25}{}}
-\@writefile{toc}{\contentsline {subsection}{Conclusiones Generales}{7}{section*.26}\protected@file@percent }
-\newlabel{conclusiones-generales}{{}{7}{Conclusiones Generales}{section*.26}{}}
-\@writefile{toc}{\contentsline {subsection}{Aplicacion}{8}{section*.27}\protected@file@percent }
-\newlabel{aplicacion}{{}{8}{Aplicacion}{section*.27}{}}
+\@writefile{toc}{\contentsline {subsection}{Conclusiones}{5}{section*.22}\protected@file@percent }
+\newlabel{conclusiones-1}{{}{5}{Conclusiones}{section*.22}{}}
+\@writefile{toc}{\contentsline {subsection}{Diagrama de dispersion}{5}{section*.23}\protected@file@percent }
+\newlabel{diagrama-de-dispersion}{{}{5}{Diagrama de dispersion}{section*.23}{}}
+\BKM@entry{id=24,dest={73656374696F6E2A2E3234},srcline={460}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E5C303030655C30303073}
+\BKM@entry{id=25,dest={73656374696F6E2A2E3235},srcline={487}}{5C3337365C3337375C303030545C303030615C303030625C3030306C5C30303061}
+\BKM@entry{id=26,dest={73656374696F6E2A2E3236},srcline={502}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030635C3030306C5C303030755C303030735C303030695C3030306F5C3030306E5C303030655C303030735C3030305C3034305C303030475C303030655C3030306E5C303030655C303030725C303030615C3030306C5C303030655C30303073}
+\@writefile{toc}{\contentsline {subsection}{Conclusiones}{6}{section*.24}\protected@file@percent }
+\newlabel{conclusiones-2}{{}{6}{Conclusiones}{section*.24}{}}
+\@writefile{toc}{\contentsline {subsection}{Tabla}{6}{section*.25}\protected@file@percent }
+\newlabel{tabla}{{}{6}{Tabla}{section*.25}{}}
+\@writefile{toc}{\contentsline {subsection}{Conclusiones Generales}{6}{section*.26}\protected@file@percent }
+\newlabel{conclusiones-generales}{{}{6}{Conclusiones Generales}{section*.26}{}}
+\BKM@entry{id=27,dest={73656374696F6E2A2E3237},srcline={533}}{5C3337365C3337375C303030415C303030705C3030306C5C303030695C303030635C303030615C303030635C303030695C3030306F5C3030306E}
+\@writefile{toc}{\contentsline {subsection}{Aplicacion}{7}{section*.27}\protected@file@percent }
+\newlabel{aplicacion}{{}{7}{Aplicacion}{section*.27}{}}
